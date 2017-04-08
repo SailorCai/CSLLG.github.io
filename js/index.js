@@ -1,8 +1,3 @@
-var isplay=window.confirm("兄弟，来点音乐？");
-if(isplay){
-	aud.play();
-};
-var index=0;
 var app=angular.module('myapp',[]);
 app.controller('control',['$scope',function($scope){
 	$scope.toggleV={
@@ -64,3 +59,8 @@ app.controller('control',['$scope',function($scope){
 		$scope.toggleV.Audio.play=true;
 	};
 }]);
+var isplay=window.confirm("兄弟，来点音乐？");
+if(isplay){
+	aud.play();
+};
+var index=0;
