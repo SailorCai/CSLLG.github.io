@@ -59,8 +59,10 @@ app.controller('control',['$scope',function($scope){
 		$scope.toggleV.Audio.play=true;
 	};
 }]);
-var isplay=window.confirm("兄弟，来点音乐？");
-if(isplay){
-	aud.play();
-};
-var index=0;
+setTimeout(function(){
+	var isplay=window.confirm("兄弟，来点音乐？");
+	if(isplay){
+		aud.play();
+	};
+	var index=0;
+},2000);
