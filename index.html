@@ -5,13 +5,39 @@
 		<meta charset="UTF-8">
 		<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
 		<link rel="stylesheet" href="css/index.css"/>
+		<link rel="stylesheet" href="iconfont/iconfont.css" />
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
 		<title>萍宝宝的个人站</title>
 	</head>
-	<body id="app">
+	<body ng-app="myapp" ng-controller="control">
 		<img class="bg-img" src="img/bg8.jpg"/>
-		<div class="audio-player"></div>
+		<div class="audio-player" ng-class="{'show':toggleV.Audio.control}">
+			<div class="jiantou" ng-click="audioS()">
+				<div ng-show="!toggleV.Audio.control" class="music-icon">
+					<img src="img/music.jpg" />
+				</div>
+				<div ng-show="toggleV.Audio.control" class="music-icon">
+					<i class="iconfont icon-shousuozuo"></i>
+				</div>
+			</div>
+			<div class="music-content">
+				<div class="wp-pic"><img src="img/wp2.jpg"/></div>
+				<div ng-repeat="item in music" class="music-item" ng-class="{'active':$index==0}" ng-click="play($event,item.route,$index)">{{item.name}}</div>
+			</div>
+			<div class="music-control">
+				<div class="control-box">
+					<div class="music-pre" ng-click="choice('pre')"><i class="iconfont icon-shangyishou"></i></div>
+					<div class="music-go" ng-click="control()">
+						<i class="iconfont icon-bofang"
+							 ng-class="{'icon-bofang':!toggleV.Audio.play,'icon-weibiaoti1':toggleV.Audio.play}">
+						</i>
+					</div>
+					<div class="music-next" ng-click="choice('next')"><i class="iconfont icon-xiayishou"></i></div>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript" src="js/index.js"></script>
 	</body>
 </html>

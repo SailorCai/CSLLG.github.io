@@ -42,8 +42,128 @@ body,html{
 	height:100%;
 }
 body{
-	overflow:scroll;
+	overflow:auto;
 }
 .audio-player{
-	width:
+	transition:0.7s;
+	width:30%;
+	height:70%;
+	position:fixed;
+	top:50%;
+	transform:translate(-100%,-50%);
+	border-radius:0 0.5rem 0 0;
+	max-width:15rem;
+}
+.audio-player.show{
+	transform:translate(0,-50%);
+}
+.jiantou{
+	width:4rem;
+	height:4rem;
+	background:rgba(248,248,255,0.7);
+	border-radius:50%;
+	position:absolute;
+	top:50%;
+	right:0;
+	transform:translate(50%,-50%);
+	cursor:pointer;
+}
+.music-content{
+	width:100%;
+	height:100%;
+	background:pink;
+	position:absolute;
+	border-radius:0 0.5rem 0 0;
+	background-image:url(../img/music3.jpg);
+	background-size:100% 100%;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+.music-control{
+	width:100%;
+	height:2rem;
+	position:absolute;
+	bottom:-2rem;
+	background:rgba(0,0,0,0.6);
+	border-radius:0 0 0.5rem;
+}
+.music-icon{
+	width:50%;
+	height:50%;
+	border-radius:50%;
+	position:absolute;
+	right:0;
+	top:50%;
+	transform:translateY(-50%);
+	overflow:hidden;
+	text-align:center;
+	line-height:2rem;
+}
+.music-icon>.iconfont{
+	font-size:1rem;
+}
+.music-icon>img{
+	width:100%;
+	height:100%;
+}
+.control-box{
+	width:7rem;
+	height:2rem;
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+}
+.control-box>div{
+	position:absolute;
+	text-align:center;
+	line-height:1.7rem !important;
+	cursor:pointer;
+	width:1.7rem;
+	height:1.7rem;
+}
+.control-box>div>.iconfont{
+	font-size:1.5rem;
+	color:#1F9AE3;
+}
+.music-go{
+	border-radius:50%;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.music-pre{
+	border-radius:50%;
+	left:0;
+	top:50%;
+	transform:translateY(-50%);
+}
+.music-next{
+	border-radius:50%;
+	right:0;
+	top:50%;
+	transform:translateY(-50%);
+}
+.music-item{
+	padding:0 10px;
+	height:25px;
+	background:rgba(0,0,0,0.5);
+	margin:5px 0;
+	cursor:pointer;
+	font-size:13px;
+	line-height:25px;
+	color:white;
+}
+.music-item.active{
+	background:rgba(0,205,0,0.7);
+}
+.wp-pic{
+	width:5rem;
+	height:5rem;
+	border-radius:50%;
+	margin:auto;
+	overflow:hidden;
+}
+.wp-pic>img{
+	width:100%;
+	height:100%;
 }
