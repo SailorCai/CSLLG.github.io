@@ -12,6 +12,10 @@
 		height:100%;
 		width:auto;
 	}
+	body{
+		background-image:url(../img/music2.jpg);
+		background-size:100% 100%;
+	}
 }
 @media only screen and (min-width: 360px){
     html{
@@ -31,6 +35,10 @@
 		width:100% !important;
 		height:auto;
 	}
+	body{
+		background-image:url(../img/bg8.jpg);
+		background-size:100% 100%;
+	}
 }
 @media only screen and (min-width: 640px){
     html{
@@ -44,17 +52,26 @@ body,html{
 body{
 	overflow:auto;
 }
-.audio-player{
+.flex{
 	transition:0.7s;
 	max-width:40%;
 	height:70%;
 	position:fixed;
 	top:50%;
-	transform:translate(-100%,-50%);
-	border-radius:0 0.5rem 0 0;
 	width:20rem;
 }
-.audio-player.show{
+.audio-player{
+	transform:translate(-100%,-50%);
+	border-radius:0 0.5rem 0 0;
+}
+.login{
+	right:0;
+	transform:translate(100%,-50%);
+	border-radius:0.5rem 0 0 0.5rem;
+	background-image:url(../img/music5.jpg);
+	background-size:100% 100%;
+}
+.audio-player.show,.flex.show{
 	transform:translate(0,-50%);
 }
 .jiantou{
@@ -66,6 +83,17 @@ body{
 	top:50%;
 	right:0;
 	transform:translate(50%,-50%);
+	cursor:pointer;
+}
+.jiantou2{
+	width:2rem;
+	height:4rem;
+	background:rgba(248,248,255,0.7);
+	border-radius:5px;
+	position:absolute;
+	top:50%;
+	right:left;
+	transform:translate(-100%,-50%);
 	cursor:pointer;
 }
 .music-content{
@@ -167,4 +195,49 @@ body{
 .wp-pic>img{
 	width:100%;
 	height:100%;
+}
+.login-word{
+	height:2rem;
+	line-height:2rem;
+	font-size:1rem;
+	text-align:center;
+}
+.login-icon{
+	line-height:4rem;
+	text-align:center;
+}
+.login-icon>.iconfont{
+	font-size:1rem;
+}
+.username{
+	padding:1rem;
+	margin:1rem;
+	text-align:center;
+}
+.username>input{
+	background:none;
+	border-radius:5px;
+	height:1rem;
+	cursor:pointer;
+}
+.username>span{
+	font-size:bold;
+	font-size:14px;
+}
+.username>button{
+	background:none;
+	width:60%;
+	height:1.5rem;
+	border-radius:5px;
+	font-size:14px;
+	cursor:pointer;
+}
+.erro-tip{
+	height:4rem;
+	font-size:1.5rem;
+	text-align:center;
+	line-height:4rem;
+	background:rgba(205,38,38,0.7);
+	color:white;
+	display:none;
 }

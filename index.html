@@ -8,18 +8,21 @@
 		<link rel="stylesheet" href="iconfont/iconfont.css" />
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/angular-route.min.js"></script>
 		<script type="text/javascript" src="js/public.js"></script>
 		<title>萍宝宝的个人站</title>
 	</head>
 	<body ng-app="myapp" ng-controller="control">
-		<img class="bg-img" src="img/bg8.jpg"/>
-		<div class="audio-player" ng-class="{'show':toggleV.Audio.control}">
-			<div class="jiantou" ng-click="audioS()">
+		<div class="erro-tip">{{tip-content}}</div>
+		<div ng-view>
+		</div>
+		<div class="flex audio-player" ng-class="{'show':toggleV.Audio.control}">
+			<div class="jiantou" ng-click="audioS('control')">
 				<div ng-show="!toggleV.Audio.control" class="music-icon">
 					<img src="img/music.jpg" />
 				</div>
 				<div ng-show="toggleV.Audio.control" class="music-icon">
-					<i class="iconfont icon-shousuozuo"></i>
+					<i class="iconfont icon-iconfonthaofang26-copy-copy"></i>
 				</div>
 			</div>
 			<div class="music-content">
@@ -36,6 +39,29 @@
 					</div>
 					<div class="music-next" ng-click="choice('next')"><i class="iconfont icon-xiayishou"></i></div>
 				</div>
+			</div>
+		</div>
+		<div class="login flex" ng-class="{'show':toggleV.Audio.login}">
+			<div class="wp-pic"><img src="img/wp1.jpg"/></div>
+			<div class="jiantou2" ng-click="audioS('login')">
+				<div ng-show="!toggleV.Audio.login" class="login-word">
+					登
+				</div>
+				<div ng-show="!toggleV.Audio.login" class="login-word">
+					陆
+				</div>
+				<div ng-show="toggleV.Audio.login" class="login-icon">
+					<i class="iconfont icon-iconfonthaofang26-copy-copy-copy"></i>
+				</div>
+			</div>
+			<div class="username">
+				<span>用户名：</span><input type="text" ng-model="user.name"/>
+			</div>
+			<div class="username">
+				<span>通行证：</span><input type="password" ng-model="user.pass"/>
+			</div>
+			<div class="username">
+				<button ng-click="login()">登陆</button>
 			</div>
 		</div>
 		<script type="text/javascript" src="js/index.js"></script>

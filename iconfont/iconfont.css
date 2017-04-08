@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1491639857536'); /* IE9*/
-  src: url('iconfont.eot?t=1491639857536#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1491639857536') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1491639857536') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1491639857536#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1491664058820'); /* IE9*/
+  src: url('iconfont.eot?t=1491664058820#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1491664058820') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1491664058820') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1491664058820#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -26,6 +26,12 @@
 .icon-duanxin:before { content: "\e647"; }
 
 .icon-xiangqu:before { content: "\e64c"; }
+
+.icon-shousuo:before { content: "\e66a"; }
+
+.icon-iconfonthaofang26-copy-copy:before { content: "\e604"; }
+
+.icon-iconfonthaofang26-copy-copy-copy:before { content: "\e605"; }
 
 .icon-shousuozuo:before { content: "\e61e"; }
 

@@ -1,18 +1,31 @@
+var index=0;
 var app=angular.module('myapp',[]);
 app.controller('control',['$scope',function($scope){
 	$scope.toggleV={
 		Audio:{
 			control:false,
+			login:false,
 			play:false
-		}
+		},
 	};
-	$scope.audioS=function(){
+	$scope.user={
+		name:null,
+		pass:null
+	}
+	$scope.audioS=function(name){
 		console.log(666);
-		$scope.toggleV.Audio.control=!$scope.toggleV.Audio.control;
+		$scope.toggleV.Audio[name]=!$scope.toggleV.Audio[name];
 	};
-	if(!aud.paused){
-		$scope.toggleV.Audio.play=true;
-	};
+	setTimeout(function(){
+		var isplay=window.confirm("兄弟，来点音乐？");
+		if(isplay){
+			aud.play();
+		};
+		index=0;
+		if(!aud.paused){
+			$scope.toggleV.Audio.play=true;
+		};
+	},2000);
 	$scope.music=[
 		{name:'RADWIMPS - スパークル - Movie版.mp3',route:'music/RADWIMPS - スパークル - Movie版.mp3'},
 		{name:'RADWIMPS - 前前前世.mp3',route:'music/RADWIMPS - 前前前世.mp3'},
@@ -46,10 +59,10 @@ app.controller('control',['$scope',function($scope){
 			aud.src=$scope.music[index].route;
 			aud.play();
 		}else{
+			index=index-1;
 			if(index<0){
 				index=5;
 			};
-			index=index-1;
 			aud.src=$scope.music[index].route;
 			aud.play();
 		};
@@ -58,11 +71,22 @@ app.controller('control',['$scope',function($scope){
 		$(all[index]).addClass('active');
 		$scope.toggleV.Audio.play=true;
 	};
-}]);
-setTimeout(function(){
-	var isplay=window.confirm("兄弟，来点音乐？");
-	if(isplay){
-		aud.play();
+	$scope.login=function(){
+		console.log(3333);
+		var lindex=0;
+		for(var i=0;i<userInfo.length;i++){
+			lindex++;
+			if($scope.user.name==userInfo[i].name){
+				if($scope.user.pass==userInfo[i].pass){
+					
+				}else{
+					tipNone('兄弟，你的通行证输错了','block');
+				};
+				break;
+			};
+		};
+		if(lindex >= userInfo.length){
+			tipNone('小伙子，你暂时没有权限登陆','block');
+		};
 	};
-	var index=0;
-},2000);
+}]);
