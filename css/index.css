@@ -46,13 +46,13 @@ body{
 }
 .audio-player{
 	transition:0.7s;
-	width:30%;
+	max-width:40%;
 	height:70%;
 	position:fixed;
 	top:50%;
 	transform:translate(-100%,-50%);
 	border-radius:0 0.5rem 0 0;
-	max-width:15rem;
+	width:20rem;
 }
 .audio-player.show{
 	transform:translate(0,-50%);
@@ -152,6 +152,7 @@ body{
 	font-size:13px;
 	line-height:25px;
 	color:white;
+	overflow:hidden;
 }
 .music-item.active{
 	background:rgba(0,205,0,0.7);
