@@ -17,7 +17,8 @@ app.controller('control',['$scope',function($scope){
 		$scope.toggleV.Audio[name]=!$scope.toggleV.Audio[name];
 	};
 	setTimeout(function(){
-		var isplay=window.confirm("兄弟，来点音乐？");
+		var isplay=false;
+		isplay=window.confirm("兄弟，来点音乐？");
 		if(isplay){
 			aud.play();
 		};
