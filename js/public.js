@@ -21,6 +21,4 @@ function tipNone(title,state){
 		$('.erro-tip').fadeOut(1000);
 	},2000);
 };
-window.onresize=function(){
-	$('body').css('height',window.innerHeight+'px');
-};
+$('body').css('height',window.innerHeight+'px');
